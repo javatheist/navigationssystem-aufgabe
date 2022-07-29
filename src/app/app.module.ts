@@ -9,10 +9,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app.routing.module';
+import { NavigationService } from './navigation.service';
+import { NotFoundComponent } from './components/404/404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
     AComponent,
     BComponent,
     CComponent,
@@ -26,7 +29,7 @@ import {AppRoutingModule} from './app.routing.module';
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
